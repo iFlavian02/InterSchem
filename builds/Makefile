@@ -154,6 +154,30 @@ testbgi/fast:
 	$(MAKE) $(MAKESILENT) -f headers\Winbgim\test\CMakeFiles\testbgi.dir\build.make headers/Winbgim/test/CMakeFiles/testbgi.dir/build
 .PHONY : testbgi/fast
 
+src/interaction.obj: src/interaction.cpp.obj
+.PHONY : src/interaction.obj
+
+# target to build an object file
+src/interaction.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\InterSchem.dir\build.make CMakeFiles/InterSchem.dir/src/interaction.cpp.obj
+.PHONY : src/interaction.cpp.obj
+
+src/interaction.i: src/interaction.cpp.i
+.PHONY : src/interaction.i
+
+# target to preprocess a source file
+src/interaction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\InterSchem.dir\build.make CMakeFiles/InterSchem.dir/src/interaction.cpp.i
+.PHONY : src/interaction.cpp.i
+
+src/interaction.s: src/interaction.cpp.s
+.PHONY : src/interaction.s
+
+# target to generate assembly for a file
+src/interaction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\InterSchem.dir\build.make CMakeFiles/InterSchem.dir/src/interaction.cpp.s
+.PHONY : src/interaction.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -178,6 +202,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\InterSchem.dir\build.make CMakeFiles/InterSchem.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/renderer.obj: src/renderer.cpp.obj
+.PHONY : src/renderer.obj
+
+# target to build an object file
+src/renderer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\InterSchem.dir\build.make CMakeFiles/InterSchem.dir/src/renderer.cpp.obj
+.PHONY : src/renderer.cpp.obj
+
+src/renderer.i: src/renderer.cpp.i
+.PHONY : src/renderer.i
+
+# target to preprocess a source file
+src/renderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\InterSchem.dir\build.make CMakeFiles/InterSchem.dir/src/renderer.cpp.i
+.PHONY : src/renderer.cpp.i
+
+src/renderer.s: src/renderer.cpp.s
+.PHONY : src/renderer.s
+
+# target to generate assembly for a file
+src/renderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\InterSchem.dir\build.make CMakeFiles/InterSchem.dir/src/renderer.cpp.s
+.PHONY : src/renderer.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -189,9 +237,15 @@ help:
 	@echo ... InterSchem
 	@echo ... bgi
 	@echo ... testbgi
+	@echo ... src/interaction.obj
+	@echo ... src/interaction.i
+	@echo ... src/interaction.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/renderer.obj
+	@echo ... src/renderer.i
+	@echo ... src/renderer.s
 .PHONY : help
 
 

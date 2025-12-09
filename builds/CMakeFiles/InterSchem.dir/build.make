@@ -86,20 +86,54 @@ CMakeFiles/InterSchem.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/InterSchem.dir/src/main.cpp.s"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Facultate\An1\Introducere in programare\InterSchem\src\main.cpp" -o CMakeFiles\InterSchem.dir\src\main.cpp.s
 
+CMakeFiles/InterSchem.dir/src/renderer.cpp.obj: CMakeFiles/InterSchem.dir/flags.make
+CMakeFiles/InterSchem.dir/src/renderer.cpp.obj: CMakeFiles/InterSchem.dir/includes_CXX.rsp
+CMakeFiles/InterSchem.dir/src/renderer.cpp.obj: D:/Facultate/An1/Introducere\ in\ programare/InterSchem/src/renderer.cpp
+CMakeFiles/InterSchem.dir/src/renderer.cpp.obj: CMakeFiles/InterSchem.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Facultate\An1\Introducere in programare\InterSchem\builds\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/InterSchem.dir/src/renderer.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/InterSchem.dir/src/renderer.cpp.obj -MF CMakeFiles\InterSchem.dir\src\renderer.cpp.obj.d -o CMakeFiles\InterSchem.dir\src\renderer.cpp.obj -c "D:\Facultate\An1\Introducere in programare\InterSchem\src\renderer.cpp"
+
+CMakeFiles/InterSchem.dir/src/renderer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/InterSchem.dir/src/renderer.cpp.i"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Facultate\An1\Introducere in programare\InterSchem\src\renderer.cpp" > CMakeFiles\InterSchem.dir\src\renderer.cpp.i
+
+CMakeFiles/InterSchem.dir/src/renderer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/InterSchem.dir/src/renderer.cpp.s"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Facultate\An1\Introducere in programare\InterSchem\src\renderer.cpp" -o CMakeFiles\InterSchem.dir\src\renderer.cpp.s
+
+CMakeFiles/InterSchem.dir/src/interaction.cpp.obj: CMakeFiles/InterSchem.dir/flags.make
+CMakeFiles/InterSchem.dir/src/interaction.cpp.obj: CMakeFiles/InterSchem.dir/includes_CXX.rsp
+CMakeFiles/InterSchem.dir/src/interaction.cpp.obj: D:/Facultate/An1/Introducere\ in\ programare/InterSchem/src/interaction.cpp
+CMakeFiles/InterSchem.dir/src/interaction.cpp.obj: CMakeFiles/InterSchem.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Facultate\An1\Introducere in programare\InterSchem\builds\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/InterSchem.dir/src/interaction.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/InterSchem.dir/src/interaction.cpp.obj -MF CMakeFiles\InterSchem.dir\src\interaction.cpp.obj.d -o CMakeFiles\InterSchem.dir\src\interaction.cpp.obj -c "D:\Facultate\An1\Introducere in programare\InterSchem\src\interaction.cpp"
+
+CMakeFiles/InterSchem.dir/src/interaction.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/InterSchem.dir/src/interaction.cpp.i"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Facultate\An1\Introducere in programare\InterSchem\src\interaction.cpp" > CMakeFiles\InterSchem.dir\src\interaction.cpp.i
+
+CMakeFiles/InterSchem.dir/src/interaction.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/InterSchem.dir/src/interaction.cpp.s"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Facultate\An1\Introducere in programare\InterSchem\src\interaction.cpp" -o CMakeFiles\InterSchem.dir\src\interaction.cpp.s
+
 # Object files for target InterSchem
 InterSchem_OBJECTS = \
-"CMakeFiles/InterSchem.dir/src/main.cpp.obj"
+"CMakeFiles/InterSchem.dir/src/main.cpp.obj" \
+"CMakeFiles/InterSchem.dir/src/renderer.cpp.obj" \
+"CMakeFiles/InterSchem.dir/src/interaction.cpp.obj"
 
 # External object files for target InterSchem
 InterSchem_EXTERNAL_OBJECTS =
 
 InterSchem.exe: CMakeFiles/InterSchem.dir/src/main.cpp.obj
+InterSchem.exe: CMakeFiles/InterSchem.dir/src/renderer.cpp.obj
+InterSchem.exe: CMakeFiles/InterSchem.dir/src/interaction.cpp.obj
 InterSchem.exe: CMakeFiles/InterSchem.dir/build.make
 InterSchem.exe: headers/Winbgim/libbgi/libbgi.a
 InterSchem.exe: CMakeFiles/InterSchem.dir/linkLibs.rsp
 InterSchem.exe: CMakeFiles/InterSchem.dir/objects1.rsp
 InterSchem.exe: CMakeFiles/InterSchem.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="D:\Facultate\An1\Introducere in programare\InterSchem\builds\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable InterSchem.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="D:\Facultate\An1\Introducere in programare\InterSchem\builds\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable InterSchem.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\InterSchem.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

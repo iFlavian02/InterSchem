@@ -148,12 +148,12 @@ headers/Winbgim/test/clean: headers/Winbgim/test/CMakeFiles/testbgi.dir/clean
 CMakeFiles/InterSchem.dir/all: headers/Winbgim/libbgi/CMakeFiles/bgi.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\InterSchem.dir\build.make CMakeFiles/InterSchem.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\InterSchem.dir\build.make CMakeFiles/InterSchem.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Facultate\An1\Introducere in programare\InterSchem\builds\CMakeFiles" --progress-num=1,2 "Built target InterSchem"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Facultate\An1\Introducere in programare\InterSchem\builds\CMakeFiles" --progress-num=1,2,3,4 "Built target InterSchem"
 .PHONY : CMakeFiles/InterSchem.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/InterSchem.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Facultate\An1\Introducere in programare\InterSchem\builds\CMakeFiles" 12
+	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Facultate\An1\Introducere in programare\InterSchem\builds\CMakeFiles" 14
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/InterSchem.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Facultate\An1\Introducere in programare\InterSchem\builds\CMakeFiles" 0
 .PHONY : CMakeFiles/InterSchem.dir/rule
@@ -165,7 +165,7 @@ InterSchem: CMakeFiles/InterSchem.dir/rule
 # codegen rule for target.
 CMakeFiles/InterSchem.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\InterSchem.dir\build.make CMakeFiles/InterSchem.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Facultate\An1\Introducere in programare\InterSchem\builds\CMakeFiles" --progress-num=1,2 "Finished codegen for target InterSchem"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Facultate\An1\Introducere in programare\InterSchem\builds\CMakeFiles" --progress-num=1,2,3,4 "Finished codegen for target InterSchem"
 .PHONY : CMakeFiles/InterSchem.dir/codegen
 
 # clean rule for target.
@@ -180,7 +180,7 @@ CMakeFiles/InterSchem.dir/clean:
 headers/Winbgim/libbgi/CMakeFiles/bgi.dir/all:
 	$(MAKE) $(MAKESILENT) -f headers\Winbgim\libbgi\CMakeFiles\bgi.dir\build.make headers/Winbgim/libbgi/CMakeFiles/bgi.dir/depend
 	$(MAKE) $(MAKESILENT) -f headers\Winbgim\libbgi\CMakeFiles\bgi.dir\build.make headers/Winbgim/libbgi/CMakeFiles/bgi.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Facultate\An1\Introducere in programare\InterSchem\builds\CMakeFiles" --progress-num=3,4,5,6,7,8,9,10,11,12 "Built target bgi"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Facultate\An1\Introducere in programare\InterSchem\builds\CMakeFiles" --progress-num=5,6,7,8,9,10,11,12,13,14 "Built target bgi"
 .PHONY : headers/Winbgim/libbgi/CMakeFiles/bgi.dir/all
 
 # Build rule for subdir invocation for target.
@@ -197,7 +197,7 @@ bgi: headers/Winbgim/libbgi/CMakeFiles/bgi.dir/rule
 # codegen rule for target.
 headers/Winbgim/libbgi/CMakeFiles/bgi.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f headers\Winbgim\libbgi\CMakeFiles\bgi.dir\build.make headers/Winbgim/libbgi/CMakeFiles/bgi.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Facultate\An1\Introducere in programare\InterSchem\builds\CMakeFiles" --progress-num=3,4,5,6,7,8,9,10,11,12 "Finished codegen for target bgi"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Facultate\An1\Introducere in programare\InterSchem\builds\CMakeFiles" --progress-num=5,6,7,8,9,10,11,12,13,14 "Finished codegen for target bgi"
 .PHONY : headers/Winbgim/libbgi/CMakeFiles/bgi.dir/codegen
 
 # clean rule for target.
@@ -212,7 +212,7 @@ headers/Winbgim/libbgi/CMakeFiles/bgi.dir/clean:
 headers/Winbgim/test/CMakeFiles/testbgi.dir/all: headers/Winbgim/libbgi/CMakeFiles/bgi.dir/all
 	$(MAKE) $(MAKESILENT) -f headers\Winbgim\test\CMakeFiles\testbgi.dir\build.make headers/Winbgim/test/CMakeFiles/testbgi.dir/depend
 	$(MAKE) $(MAKESILENT) -f headers\Winbgim\test\CMakeFiles\testbgi.dir\build.make headers/Winbgim/test/CMakeFiles/testbgi.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Facultate\An1\Introducere in programare\InterSchem\builds\CMakeFiles" --progress-num=13,14 "Built target testbgi"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Facultate\An1\Introducere in programare\InterSchem\builds\CMakeFiles" --progress-num=15,16 "Built target testbgi"
 .PHONY : headers/Winbgim/test/CMakeFiles/testbgi.dir/all
 
 # Build rule for subdir invocation for target.
@@ -229,7 +229,7 @@ testbgi: headers/Winbgim/test/CMakeFiles/testbgi.dir/rule
 # codegen rule for target.
 headers/Winbgim/test/CMakeFiles/testbgi.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f headers\Winbgim\test\CMakeFiles\testbgi.dir\build.make headers/Winbgim/test/CMakeFiles/testbgi.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Facultate\An1\Introducere in programare\InterSchem\builds\CMakeFiles" --progress-num=13,14 "Finished codegen for target testbgi"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Facultate\An1\Introducere in programare\InterSchem\builds\CMakeFiles" --progress-num=15,16 "Finished codegen for target testbgi"
 .PHONY : headers/Winbgim/test/CMakeFiles/testbgi.dir/codegen
 
 # clean rule for target.
