@@ -1,0 +1,11 @@
+D:/Facultate/An1/Introducere in programare/InterSchem/builds/CMakeFiles/InterSchem.dir
+D:/Facultate/An1/Introducere in programare/InterSchem/builds/CMakeFiles/edit_cache.dir
+D:/Facultate/An1/Introducere in programare/InterSchem/builds/CMakeFiles/rebuild_cache.dir
+D:/Facultate/An1/Introducere in programare/InterSchem/builds/headers/Winbgim/CMakeFiles/edit_cache.dir
+D:/Facultate/An1/Introducere in programare/InterSchem/builds/headers/Winbgim/CMakeFiles/rebuild_cache.dir
+D:/Facultate/An1/Introducere in programare/InterSchem/builds/headers/Winbgim/libbgi/CMakeFiles/bgi.dir
+D:/Facultate/An1/Introducere in programare/InterSchem/builds/headers/Winbgim/libbgi/CMakeFiles/edit_cache.dir
+D:/Facultate/An1/Introducere in programare/InterSchem/builds/headers/Winbgim/libbgi/CMakeFiles/rebuild_cache.dir
+D:/Facultate/An1/Introducere in programare/InterSchem/builds/headers/Winbgim/test/CMakeFiles/testbgi.dir
+D:/Facultate/An1/Introducere in programare/InterSchem/builds/headers/Winbgim/test/CMakeFiles/edit_cache.dir
+D:/Facultate/An1/Introducere in programare/InterSchem/builds/headers/Winbgim/test/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,13 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/InterSchem.dir/src/main.cpp.obj"
+  "CMakeFiles/InterSchem.dir/src/main.cpp.obj.d"
+  "InterSchem.exe"
+  "InterSchem.exe.manifest"
+  "InterSchem.pdb"
+  "libInterSchem.dll.a"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/InterSchem.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

@@ -1,0 +1,37 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe build active file",
+			"command": "C:/msys64/ucrt64/bin/g++.exe",
+			"args": [
+				"-g",
+				"${workspaceFolder}/src/main.cpp",
+				"${workspaceFolder}/src/functions.cpp",
+				"${workspaceFolder}/src/structs.cpp",
+				"-o",
+				"${workspaceFolder}/builds/InterSchem.exe",
+				"-I${workspaceFolder}/headers/WinBGIm-64-main/libbgi/include",
+				"-L${workspaceFolder}/headers/WinBGIm-64-main/libbgi/lib",
+				"-lbgi",
+				"-lgdi32",
+				"-lcomdlg32",
+				"-luuid",
+				"-loleaut32",
+				"-lole32"
+			],
+			"options": {
+				"cwd": "C:/msys64/ucrt64/bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: C:/msys64/ucrt64/bin/g++.exe"
+		}
+	]
+}
