@@ -22,7 +22,7 @@ void drawBlock(Block b, int selectedId) {
         fillellipse(b.center.x, b.center.y, b.w / 2, b.h / 2);
         outtextxy(b.center.x - textwidth(b.text) / 2, b.center.y - textheight(b.text) / 2, b.text);
     } else if (b.type == TYPE_DECISION) {
-        // Simple Rhombus approximation
+        // Simple Rhomb approximation
         int points[] = {
             b.center.x, top,
             right, b.center.y,
@@ -39,8 +39,21 @@ void drawBlock(Block b, int selectedId) {
     }
 }
 
+// Draws a 3-segment orthogonal link (Vertical -> Horizontal -> Vertical)
 void drawLink(Point start, Point end) {
     setcolor(WHITE);
     setlinestyle(SOLID_LINE, 0, 1);
-    line(start.x, start.y, end.x, end.y);
+
+    // Midpoint Y for the horizontal segment
+    int midY = (start.y + end.y) / 2;
+
+    // 1. Vertical down from start
+    line(start.x, start.y, start.x, midY);
+
+    // 2. Horizontal across
+    line(start.x, midY, end.x, midY);
+
+    // 3. Vertical down to end
+    line(end.x, midY, end.x, end.y);
+
 }
