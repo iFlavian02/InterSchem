@@ -138,12 +138,12 @@ void drawToolbar(AppState state, int w, int h) {
     setbkcolor(DARKGRAY);
     
     const char* labels[] = {
-        "SELECT", "START", "OPERATION", "DECISION", "STOP", "LINK", "DELETE"
+        "SELECT", "START", "OPERATION", "DECISION", "STOP", "LINK", "DELETE", "SAVE", "LOAD"
     };
     ToolMode modes[] = {
-        MODE_SELECT, MODE_ADD_START, MODE_ADD_OP, MODE_ADD_DECISION, MODE_ADD_STOP, MODE_LINK, MODE_DELETE
+        MODE_SELECT, MODE_ADD_START, MODE_ADD_OP, MODE_ADD_DECISION, MODE_ADD_STOP, MODE_LINK, MODE_DELETE, MODE_SAVE, MODE_LOAD
     };
-    int count = 7;
+    int count = 9;
     
     for (int i = 0; i < count; i++) {
         int y = BTN_MARGIN + i * (BTN_HEIGHT + BTN_MARGIN);

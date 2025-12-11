@@ -12,7 +12,9 @@ enum ToolMode {
     MODE_ADD_DECISION,
     MODE_ADD_STOP,
     MODE_LINK,
-    MODE_DELETE
+    MODE_DELETE,
+    MODE_SAVE,
+    MODE_LOAD
 };
 
 struct AppState {

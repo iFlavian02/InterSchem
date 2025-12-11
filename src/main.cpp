@@ -6,6 +6,8 @@
 #include "../headers/renderer.h"
 #include "../headers/interaction.h"
 
+#include "../headers/file_io.h"
+
 // Screen dimensions
 const int WINDOW_WIDTH = 1200;
 const int WINDOW_HEIGHT = 800;
@@ -43,11 +45,25 @@ int main() {
             if (mx < TOOLBAR_WIDTH) {
                 // Determine which button was clicked
                 int btnIndex = (my - BTN_MARGIN) / (BTN_HEIGHT + BTN_MARGIN);
-                if (btnIndex >= 0 && btnIndex <= 6) {
+                if (btnIndex >= 0 && btnIndex <= 8) {
                     ToolMode modes[] = {
-                        MODE_SELECT, MODE_ADD_START, MODE_ADD_OP, MODE_ADD_DECISION, MODE_ADD_STOP, MODE_LINK, MODE_DELETE
+                        MODE_SELECT, MODE_ADD_START, MODE_ADD_OP, MODE_ADD_DECISION, MODE_ADD_STOP, MODE_LINK, MODE_DELETE,
+                        MODE_SAVE, MODE_LOAD
                     };
-                    appState.currentMode = modes[btnIndex];
+                    
+                    if (modes[btnIndex] == MODE_SAVE) {
+                        saveToFile("scheme.txt", &appState);
+                        // Optional: Show message?
+                        std::cout << "Saved to scheme.txt" << std::endl;
+                    } 
+                    else if (modes[btnIndex] == MODE_LOAD) {
+                        loadFromFile("scheme.txt", &appState);
+                        std::cout << "Loaded from scheme.txt" << std::endl;
+                    } 
+                    else {
+                        appState.currentMode = modes[btnIndex];
+                    }
+
                     // Reset transient states
                     appState.isDragging = false;
                     appState.selectedBlockId = -1;

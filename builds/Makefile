@@ -154,6 +154,30 @@ testbgi/fast:
 	$(MAKE) $(MAKESILENT) -f headers\Winbgim\test\CMakeFiles\testbgi.dir\build.make headers/Winbgim/test/CMakeFiles/testbgi.dir/build
 .PHONY : testbgi/fast
 
+src/file_io.obj: src/file_io.cpp.obj
+.PHONY : src/file_io.obj
+
+# target to build an object file
+src/file_io.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\InterSchem.dir\build.make CMakeFiles/InterSchem.dir/src/file_io.cpp.obj
+.PHONY : src/file_io.cpp.obj
+
+src/file_io.i: src/file_io.cpp.i
+.PHONY : src/file_io.i
+
+# target to preprocess a source file
+src/file_io.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\InterSchem.dir\build.make CMakeFiles/InterSchem.dir/src/file_io.cpp.i
+.PHONY : src/file_io.cpp.i
+
+src/file_io.s: src/file_io.cpp.s
+.PHONY : src/file_io.s
+
+# target to generate assembly for a file
+src/file_io.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\InterSchem.dir\build.make CMakeFiles/InterSchem.dir/src/file_io.cpp.s
+.PHONY : src/file_io.cpp.s
+
 src/interaction.obj: src/interaction.cpp.obj
 .PHONY : src/interaction.obj
 
@@ -237,6 +261,9 @@ help:
 	@echo ... InterSchem
 	@echo ... bgi
 	@echo ... testbgi
+	@echo ... src/file_io.obj
+	@echo ... src/file_io.i
+	@echo ... src/file_io.s
 	@echo ... src/interaction.obj
 	@echo ... src/interaction.i
 	@echo ... src/interaction.s
