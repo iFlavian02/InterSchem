@@ -120,4 +120,4 @@ This project is for educational purposes as part of an "Introduction to Programm
 
 ## Author
 
-Developed by [iFlavian02](https://github.com/iFlavian02).
+Developed by [Ilie Flavian](https://github.com/iFlavian02).
