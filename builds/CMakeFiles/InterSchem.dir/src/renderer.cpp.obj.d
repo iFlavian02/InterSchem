@@ -3,6 +3,7 @@ CMakeFiles/InterSchem.dir/src/renderer.cpp.obj: \
  D:/Facultate/An1/Introducere\ in\ programare/InterSchem/headers/renderer.h \
  D:/Facultate/An1/Introducere\ in\ programare/InterSchem/headers/block.h \
  D:/Facultate/An1/Introducere\ in\ programare/InterSchem/headers/geometry.h \
+ D:/Facultate/An1/Introducere\ in\ programare/InterSchem/headers/app_state.h \
  D:/Facultate/An1/Introducere\ in\ programare/InterSchem/headers/Winbgim/libbgi/include/bgi/graphics.h \
  C:/msys64/ucrt64/include/windows.h C:/msys64/ucrt64/include/_mingw.h \
  C:/msys64/ucrt64/include/_mingw_mac.h \

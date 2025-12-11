@@ -384,8 +384,14 @@ CMakeFiles/InterSchem.dir/src/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/14.2.0/sstream \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/sstream.tcc \
  D:/Facultate/An1/Introducere\ in\ programare/InterSchem/headers/Winbgim/libbgi/include/bgi/winbgim.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/vector \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_uninitialized.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_bvector.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/vector.tcc \
  D:/Facultate/An1/Introducere\ in\ programare/InterSchem/headers/app_state.h \
  D:/Facultate/An1/Introducere\ in\ programare/InterSchem/headers/block.h \
  D:/Facultate/An1/Introducere\ in\ programare/InterSchem/headers/geometry.h \
  D:/Facultate/An1/Introducere\ in\ programare/InterSchem/headers/renderer.h \
+ D:/Facultate/An1/Introducere\ in\ programare/InterSchem/headers/app_state.h \
  D:/Facultate/An1/Introducere\ in\ programare/InterSchem/headers/interaction.h

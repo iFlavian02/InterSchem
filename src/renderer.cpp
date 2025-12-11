@@ -123,3 +123,49 @@ void drawLink(Point start, Point end, Block* obstacles, int obstacleCount) {
     
     setcolor(WHITE); // Reset
 }
+
+// Toolbar Constants
+const int TOOLBAR_WIDTH = 150;
+const int BTN_HEIGHT = 40;
+const int BTN_MARGIN = 10;
+
+void drawToolbar(AppState state, int w, int h) {
+    // Background
+    setfillstyle(SOLID_FILL, DARKGRAY);
+    bar(0, 0, TOOLBAR_WIDTH, h);
+    
+    setcolor(WHITE);
+    setbkcolor(DARKGRAY);
+    
+    const char* labels[] = {
+        "SELECT", "START", "OPERATION", "DECISION", "STOP", "LINK", "DELETE"
+    };
+    ToolMode modes[] = {
+        MODE_SELECT, MODE_ADD_START, MODE_ADD_OP, MODE_ADD_DECISION, MODE_ADD_STOP, MODE_LINK, MODE_DELETE
+    };
+    int count = 7;
+    
+    for (int i = 0; i < count; i++) {
+        int y = BTN_MARGIN + i * (BTN_HEIGHT + BTN_MARGIN);
+        int bottom = y + BTN_HEIGHT;
+        
+        // Highlight active
+        if (state.currentMode == modes[i]) {
+            setfillstyle(SOLID_FILL, BLUE);
+        } else {
+            setfillstyle(SOLID_FILL, LIGHTGRAY);
+        }
+        bar(BTN_MARGIN, y, TOOLBAR_WIDTH - BTN_MARGIN, bottom);
+        rectangle(BTN_MARGIN, y, TOOLBAR_WIDTH - BTN_MARGIN, bottom);
+        
+        // Center text
+        int tx = (TOOLBAR_WIDTH - textwidth((char*)labels[i])) / 2;
+        int ty = y + (BTN_HEIGHT - textheight((char*)labels[i])) / 2;
+        
+        setbkcolor(state.currentMode == modes[i] ? BLUE : LIGHTGRAY);
+        outtextxy(tx, ty, (char*)labels[i]);
+    }
+    
+    // Reset background color for main canvas
+    setbkcolor(BLACK);
+}
