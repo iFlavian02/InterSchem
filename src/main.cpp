@@ -28,12 +28,17 @@ int main() {
     appState.blocks[0].h = 50; 
     strcpy(appState.blocks[0].text, "START");
 
+    appState.blocks[0].nextId = 1; 
+    appState.blocks[0].falseId = -1;
+
     appState.blocks[1].id = 1; 
     appState.blocks[1].type = TYPE_OP;    
     appState.blocks[1].center = {600, 300}; 
     appState.blocks[1].w = 150; 
     appState.blocks[1].h = 60; 
     strcpy(appState.blocks[1].text, "x = x + 1");
+    appState.blocks[1].nextId = 2;
+    appState.blocks[1].falseId = -1;
 
     appState.blocks[2].id = 2; 
     appState.blocks[2].type = TYPE_DECISION; 
@@ -41,6 +46,8 @@ int main() {
     appState.blocks[2].w = 120; 
     appState.blocks[2].h = 80; 
     strcpy(appState.blocks[2].text, "x < 10");
+    appState.blocks[2].nextId = -1;
+    appState.blocks[2].falseId = -1;
 
     int page = 0;
     while (true) {
@@ -92,9 +99,29 @@ int main() {
         }
 
         // 2. DRAWING
-        // Draw links (hardcoded for test)
-        drawLink(appState.blocks[0].center, appState.blocks[1].center);
-        drawLink(appState.blocks[1].center, appState.blocks[2].center);
+        // Draw links
+        for (int i = 0; i < appState.blockCount; i++) {
+            // Check Main Connection
+            if (appState.blocks[i].nextId != -1) {
+                // Find target
+                for(int j = 0; j < appState.blockCount; j++) {
+                    if (appState.blocks[j].id == appState.blocks[i].nextId) {
+                        drawLink(appState.blocks[i].center, appState.blocks[j].center, appState.blocks, appState.blockCount);
+                        break;
+                    }
+                }
+            }
+            // Check False Connection (for Decision)
+            if (appState.blocks[i].type == TYPE_DECISION && appState.blocks[i].falseId != -1) {
+                 for(int j = 0; j < appState.blockCount; j++) {
+                    if (appState.blocks[j].id == appState.blocks[i].falseId) {
+                        // Draw with maybe a different color or style? Or just standard link
+                        drawLink(appState.blocks[i].center, appState.blocks[j].center, appState.blocks, appState.blockCount);
+                        break;
+                    }
+                }
+            }
+        }
 
         // Draw blocks
         for (int i = 0; i < appState.blockCount; i++) {
