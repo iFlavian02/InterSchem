@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/InterSchem.dir/src/file_io.cpp.obj.d"
   "CMakeFiles/InterSchem.dir/src/interaction.cpp.obj"
   "CMakeFiles/InterSchem.dir/src/interaction.cpp.obj.d"
+  "CMakeFiles/InterSchem.dir/src/interpreter.cpp.obj"
+  "CMakeFiles/InterSchem.dir/src/interpreter.cpp.obj.d"
   "CMakeFiles/InterSchem.dir/src/main.cpp.obj"
   "CMakeFiles/InterSchem.dir/src/main.cpp.obj.d"
   "CMakeFiles/InterSchem.dir/src/renderer.cpp.obj"

@@ -202,6 +202,30 @@ src/interaction.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\InterSchem.dir\build.make CMakeFiles/InterSchem.dir/src/interaction.cpp.s
 .PHONY : src/interaction.cpp.s
 
+src/interpreter.obj: src/interpreter.cpp.obj
+.PHONY : src/interpreter.obj
+
+# target to build an object file
+src/interpreter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\InterSchem.dir\build.make CMakeFiles/InterSchem.dir/src/interpreter.cpp.obj
+.PHONY : src/interpreter.cpp.obj
+
+src/interpreter.i: src/interpreter.cpp.i
+.PHONY : src/interpreter.i
+
+# target to preprocess a source file
+src/interpreter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\InterSchem.dir\build.make CMakeFiles/InterSchem.dir/src/interpreter.cpp.i
+.PHONY : src/interpreter.cpp.i
+
+src/interpreter.s: src/interpreter.cpp.s
+.PHONY : src/interpreter.s
+
+# target to generate assembly for a file
+src/interpreter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\InterSchem.dir\build.make CMakeFiles/InterSchem.dir/src/interpreter.cpp.s
+.PHONY : src/interpreter.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -267,6 +291,9 @@ help:
 	@echo ... src/interaction.obj
 	@echo ... src/interaction.i
 	@echo ... src/interaction.s
+	@echo ... src/interpreter.obj
+	@echo ... src/interpreter.i
+	@echo ... src/interpreter.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

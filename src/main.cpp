@@ -7,6 +7,7 @@
 #include "../headers/interaction.h"
 
 #include "../headers/file_io.h"
+#include "../headers/interpreter.h"
 
 // Screen dimensions
 const int WINDOW_WIDTH = 1200;
@@ -45,21 +46,27 @@ int main() {
             if (mx < TOOLBAR_WIDTH) {
                 // Determine which button was clicked
                 int btnIndex = (my - BTN_MARGIN) / (BTN_HEIGHT + BTN_MARGIN);
-                if (btnIndex >= 0 && btnIndex <= 8) {
+                if (btnIndex >= 0 && btnIndex <= 9) {
                     ToolMode modes[] = {
                         MODE_SELECT, MODE_ADD_START, MODE_ADD_OP, MODE_ADD_DECISION, MODE_ADD_STOP, MODE_LINK, MODE_DELETE,
-                        MODE_SAVE, MODE_LOAD
+                        MODE_SAVE, MODE_LOAD, MODE_RUN
                     };
                     
                     if (modes[btnIndex] == MODE_SAVE) {
                         saveToFile("scheme.txt", &appState);
-                        // Optional: Show message?
                         std::cout << "Saved to scheme.txt" << std::endl;
                     } 
                     else if (modes[btnIndex] == MODE_LOAD) {
                         loadFromFile("scheme.txt", &appState);
                         std::cout << "Loaded from scheme.txt" << std::endl;
                     } 
+                    else if (modes[btnIndex] == MODE_RUN) {
+                        // FORCE SAVE BEFORE RUN (Good practice)
+                        saveToFile("scheme_autosave.txt", &appState);
+                        runScheme(&appState);
+                        // Reset to SELECT after run
+                        appState.currentMode = MODE_SELECT;
+                    }
                     else {
                         appState.currentMode = modes[btnIndex];
                     }
