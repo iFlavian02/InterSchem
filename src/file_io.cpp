@@ -9,11 +9,11 @@ void saveToFile(const char* filename, const AppState* state) {
     fprintf(f, "%d\n", state->blockCount);
     for (int i = 0; i < state->blockCount; i++) {
         Block b = state->blocks[i];
-        // Format: ID Type X Y W H Text NextId FalseId
-        fprintf(f, "%d %d %d %d %d %d %s %d %d\n", 
+        // Format: ID Type X Y W H NextId FalseId "Text"
+        // Text is last and quoted to handle spaces
+        fprintf(f, "%d %d %d %d %d %d %d %d \"%s\"\n", 
             b.id, b.type, b.center.x, b.center.y, b.w, b.h, 
-            strlen(b.text) > 0 ? b.text : "_", // Use placeholder if empty
-            b.nextId, b.falseId);
+            b.nextId, b.falseId, b.text);
     }
     fclose(f);
 }
@@ -23,17 +23,31 @@ void loadFromFile(const char* filename, AppState* state) {
     if (!f) return;
 
     fscanf(f, "%d", &state->blockCount);
+    fgetc(f); // Consume newline
+    
     for (int i = 0; i < state->blockCount; i++) {
         Block* b = &state->blocks[i];
         int typeInt;
-        fscanf(f, "%d %d %d %d %d %d %s %d %d", 
+        
+        // Read fixed fields
+        fscanf(f, "%d %d %d %d %d %d %d %d", 
             &b->id, &typeInt, &b->center.x, &b->center.y, &b->w, &b->h, 
-            b->text, &b->nextId, &b->falseId);
+            &b->nextId, &b->falseId);
         b->type = (BlockType)typeInt;
         
-        if (strcmp(b->text, "_") == 0) {
-            strcpy(b->text, "");
+        // Skip to opening quote
+        int c;
+        while ((c = fgetc(f)) != EOF && c != '"');
+        
+        // Read text until closing quote
+        int idx = 0;
+        while ((c = fgetc(f)) != EOF && c != '"' && idx < MAX_TEXT - 1) {
+            b->text[idx++] = (char)c;
         }
+        b->text[idx] = '\0';
+        
+        // Consume rest of line
+        while ((c = fgetc(f)) != EOF && c != '\n');
     }
     fclose(f);
     
@@ -42,3 +56,4 @@ void loadFromFile(const char* filename, AppState* state) {
     state->isDragging = false;
     state->linkSourceId = -1;
 }
+

@@ -154,6 +154,30 @@ testbgi/fast:
 	$(MAKE) $(MAKESILENT) -f headers\Winbgim\test\CMakeFiles\testbgi.dir\build.make headers/Winbgim/test/CMakeFiles/testbgi.dir/build
 .PHONY : testbgi/fast
 
+src/codegen.obj: src/codegen.cpp.obj
+.PHONY : src/codegen.obj
+
+# target to build an object file
+src/codegen.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\InterSchem.dir\build.make CMakeFiles/InterSchem.dir/src/codegen.cpp.obj
+.PHONY : src/codegen.cpp.obj
+
+src/codegen.i: src/codegen.cpp.i
+.PHONY : src/codegen.i
+
+# target to preprocess a source file
+src/codegen.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\InterSchem.dir\build.make CMakeFiles/InterSchem.dir/src/codegen.cpp.i
+.PHONY : src/codegen.cpp.i
+
+src/codegen.s: src/codegen.cpp.s
+.PHONY : src/codegen.s
+
+# target to generate assembly for a file
+src/codegen.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\InterSchem.dir\build.make CMakeFiles/InterSchem.dir/src/codegen.cpp.s
+.PHONY : src/codegen.cpp.s
+
 src/file_io.obj: src/file_io.cpp.obj
 .PHONY : src/file_io.obj
 
@@ -285,6 +309,9 @@ help:
 	@echo ... InterSchem
 	@echo ... bgi
 	@echo ... testbgi
+	@echo ... src/codegen.obj
+	@echo ... src/codegen.i
+	@echo ... src/codegen.s
 	@echo ... src/file_io.obj
 	@echo ... src/file_io.i
 	@echo ... src/file_io.s

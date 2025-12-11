@@ -34,11 +34,29 @@ void setVarValue(const char* name, float val) {
 }
 
 // --- Parsing Helper ---
-// Very simple parser: "LHS = RHS" or "LHS OP RHS"
-// Supports: "a = 5", "a = b + 1", "a < 10"
-// Assumption: Spaces between operators.
+
+// Trim leading and trailing spaces in-place
+void trimSpaces(char* str) {
+    // Trim leading
+    char* start = str;
+    while (*start == ' ') start++;
+    
+    // Shift if needed
+    if (start != str) {
+        memmove(str, start, strlen(start) + 1);
+    }
+    
+    // Trim trailing
+    int len = strlen(str);
+    while (len > 0 && str[len - 1] == ' ') {
+        str[--len] = '\0';
+    }
+}
 
 float parseExpression(char* expr) {
+    // Trim first
+    trimSpaces(expr);
+    
     // Check if it's a number
     char* end;
     float val = strtof(expr, &end);
@@ -46,7 +64,6 @@ float parseExpression(char* expr) {
         return val;
     }
     // Check if it's a variable
-    // Simple check: if it starts with alpha
     if ((expr[0] >= 'a' && expr[0] <= 'z') || (expr[0] >= 'A' && expr[0] <= 'Z')) {
          return getVarValue(expr);
     }
@@ -54,11 +71,8 @@ float parseExpression(char* expr) {
 }
 
 // Evaluates "Operand1 Operator Operand2"
-// example: "x + 1", "x", "5"
 float evaluateRHS(char* rhs) {
-    // 1. Try to split by operators +, -, *, /, %, <, >
-    // This is a naive parser. 
-    // We expect "A + B" or just "A"
+    trimSpaces(rhs);
     
     char op = 0;
     char* opPtr = NULL;
@@ -69,23 +83,22 @@ float evaluateRHS(char* rhs) {
     else if ((opPtr = strchr(rhs, '/'))) op = '/';
     else if ((opPtr = strchr(rhs, '<'))) op = '<';
     else if ((opPtr = strchr(rhs, '>'))) op = '>';
-    // == coverage?
     
     if (op) {
         *opPtr = '\0'; // Split string
-        char* part1 = rhs;
-        char* part2 = opPtr + 1;
+        char part1[50], part2[50];
+        strcpy(part1, rhs);
+        strcpy(part2, opPtr + 1);
         
-        // Trim spaces (naive)
-        while(*part1 == ' ') part1++;
-        while(*part2 == ' ') part2++;
-        // We assume valid input for now or handle basic errors
+        // Trim both parts
+        trimSpaces(part1);
+        trimSpaces(part2);
+        
+        // Restore original string
+        *opPtr = op;
         
         float v1 = parseExpression(part1);
         float v2 = parseExpression(part2);
-        
-        // Restore string (optional, but good practice since we modify in place)
-        *opPtr = op;
         
         switch(op) {
             case '+': return v1 + v2;

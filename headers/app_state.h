@@ -15,7 +15,8 @@ enum ToolMode {
     MODE_DELETE,
     MODE_SAVE,
     MODE_LOAD,
-    MODE_RUN
+    MODE_RUN,
+    MODE_GEN_CODE
 };
 
 struct AppState {

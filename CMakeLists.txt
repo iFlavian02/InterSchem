@@ -13,6 +13,7 @@ add_executable(InterSchem
     src/interaction.cpp
     src/file_io.cpp
     src/interpreter.cpp
+    src/codegen.cpp
 )
 
 # Link against bgi (the target defined in Winbgim/libbgi)

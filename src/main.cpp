@@ -8,6 +8,7 @@
 
 #include "../headers/file_io.h"
 #include "../headers/interpreter.h"
+#include "../headers/codegen.h"
 
 // Screen dimensions
 const int WINDOW_WIDTH = 1200;
@@ -46,10 +47,10 @@ int main() {
             if (mx < TOOLBAR_WIDTH) {
                 // Determine which button was clicked
                 int btnIndex = (my - BTN_MARGIN) / (BTN_HEIGHT + BTN_MARGIN);
-                if (btnIndex >= 0 && btnIndex <= 9) {
+                if (btnIndex >= 0 && btnIndex <= 10) {
                     ToolMode modes[] = {
                         MODE_SELECT, MODE_ADD_START, MODE_ADD_OP, MODE_ADD_DECISION, MODE_ADD_STOP, MODE_LINK, MODE_DELETE,
-                        MODE_SAVE, MODE_LOAD, MODE_RUN
+                        MODE_SAVE, MODE_LOAD, MODE_RUN, MODE_GEN_CODE
                     };
                     
                     if (modes[btnIndex] == MODE_SAVE) {
@@ -65,6 +66,11 @@ int main() {
                         saveToFile("scheme_autosave.txt", &appState);
                         runScheme(&appState);
                         // Reset to SELECT after run
+                        appState.currentMode = MODE_SELECT;
+                    }
+                    else if (modes[btnIndex] == MODE_GEN_CODE) {
+                        generateCode("generated.cpp", &appState);
+                        std::cout << "Exported C++ to generated.cpp" << std::endl;
                         appState.currentMode = MODE_SELECT;
                     }
                     else {
@@ -256,13 +262,9 @@ int main() {
              getmouseclick(WM_RBUTTONDOWN, mx, my);
              for (int i = 0; i < appState.blockCount; i++) {
                 if (isInside(appState.blocks[i], mx, my)) {
-                    // Primitive Input Dialog
-                    // Unfortunately inputbox is not standard WinBGIm. 
-                    // We might need to implement a simple one or use console std::cin if we can bring it to foreground?
-                    // Or use a graphical simple input loop.
-                    // For now, let's just log "Edit requested".
-                    std::cout << "Edit requested for block " << appState.blocks[i].id << std::endl;
-                    // TODO: Implement graphical text input
+                    // Open graphical input dialog
+                    inputText(mx, my, appState.blocks[i].text, MAX_TEXT);
+                    // Force redraw immediately to remove dialog artifact if needed
                     break;
                 }
             }

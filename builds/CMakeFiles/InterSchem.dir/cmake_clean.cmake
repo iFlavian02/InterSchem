@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/InterSchem.dir/src/codegen.cpp.obj"
+  "CMakeFiles/InterSchem.dir/src/codegen.cpp.obj.d"
   "CMakeFiles/InterSchem.dir/src/file_io.cpp.obj"
   "CMakeFiles/InterSchem.dir/src/file_io.cpp.obj.d"
   "CMakeFiles/InterSchem.dir/src/interaction.cpp.obj"
