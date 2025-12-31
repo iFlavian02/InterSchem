@@ -1,0 +1,50 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: windows-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Set up MinGW
+        uses: msys2/setup-msys2@v2
+        with:
+          msystem: UCRT64
+          update: true
+          install: >-
+            mingw-w64-ucrt-x86_64-gcc
+            mingw-w64-ucrt-x86_64-cmake
+            make
+
+      - name: Configure CMake
+        shell: msys2 {0}
+        run: cmake -B build -G "MinGW Makefiles"
+
+      - name: Build
+        shell: msys2 {0}
+        run: cmake --build build
+
+      - name: Create release package
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path release
+          Copy-Item build/InterSchem.exe release/
+          Copy-Item build/*.dll release/
+          Compress-Archive -Path release/* -DestinationPath InterSchem-${{ github.ref_name }}-windows.zip
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: InterSchem-${{ github.ref_name }}-windows.zip
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

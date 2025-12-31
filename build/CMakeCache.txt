@@ -257,6 +257,19 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Directory under which to collect all populated content
+FETCHCONTENT_BASE_DIR:PATH=D:/Facultate/An1/Introducere in programare/InterSchem/build/_deps
+
+//Disables all attempts to download or update content and assumes
+// source dirs already exist
+FETCHCONTENT_FULLY_DISCONNECTED:BOOL=OFF
+
+//Enables QUIET option for all content population
+FETCHCONTENT_QUIET:BOOL=ON
+
+//Enables UPDATE_DISCONNECTED behavior for all content population
+FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
+
 //Value Computed by CMake
 InterSchem_BINARY_DIR:STATIC=D:/Facultate/An1/Introducere in programare/InterSchem/build
 
@@ -267,7 +280,7 @@ InterSchem_IS_TOP_LEVEL:STATIC=ON
 InterSchem_SOURCE_DIR:STATIC=D:/Facultate/An1/Introducere in programare/InterSchem
 
 //Value Computed by CMake
-WinBGIm_BINARY_DIR:STATIC=D:/Facultate/An1/Introducere in programare/InterSchem/build/headers/Winbgim
+WinBGIm_BINARY_DIR:STATIC=D:/Facultate/An1/Introducere in programare/InterSchem/build/winbgim_build
 
 //Value Computed by CMake
 WinBGIm_IS_TOP_LEVEL:STATIC=OFF

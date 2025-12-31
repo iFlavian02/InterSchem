@@ -59,3 +59,36 @@ target_include_directories(InterSchem PRIVATE ${WINBGIM_SOURCE_DIR}/libbgi/inclu
 target_link_libraries(InterSchem PRIVATE
     bgi
 )
+
+# ============================================================================
+# Copy Runtime DLLs (MinGW Redistributables)
+# ============================================================================
+# This ensures the app runs on systems without MinGW installed
+if(WIN32 AND MINGW)
+    # Find the MinGW bin directory
+    get_filename_component(MINGW_BIN_DIR "${CMAKE_CXX_COMPILER}" DIRECTORY)
+    
+    # List of required runtime DLLs
+    set(RUNTIME_DLLS
+        "libgcc_s_seh-1.dll"
+        "libstdc++-6.dll"
+        "libwinpthread-1.dll"
+    )
+    
+    # Copy each DLL to the output directory after build
+    foreach(DLL ${RUNTIME_DLLS})
+        set(DLL_PATH "${MINGW_BIN_DIR}/${DLL}")
+        if(EXISTS "${DLL_PATH}")
+            add_custom_command(TARGET InterSchem POST_BUILD
+                COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                    "${DLL_PATH}"
+                    "$<TARGET_FILE_DIR:InterSchem>"
+                COMMENT "Copying ${DLL} to output directory"
+            )
+        else()
+            message(WARNING "Runtime DLL not found: ${DLL_PATH}")
+        endif()
+    endforeach()
+    
+    message(STATUS "Runtime DLLs will be copied from: ${MINGW_BIN_DIR}")
+endif()

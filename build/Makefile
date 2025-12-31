@@ -138,7 +138,7 @@ bgi: cmake_check_build_system
 
 # fast build rule for target.
 bgi/fast:
-	$(MAKE) $(MAKESILENT) -f headers\Winbgim\libbgi\CMakeFiles\bgi.dir\build.make headers/Winbgim/libbgi/CMakeFiles/bgi.dir/build
+	$(MAKE) $(MAKESILENT) -f winbgim_build\libbgi\CMakeFiles\bgi.dir\build.make winbgim_build/libbgi/CMakeFiles/bgi.dir/build
 .PHONY : bgi/fast
 
 #=============================================================================
@@ -151,7 +151,7 @@ testbgi: cmake_check_build_system
 
 # fast build rule for target.
 testbgi/fast:
-	$(MAKE) $(MAKESILENT) -f headers\Winbgim\test\CMakeFiles\testbgi.dir\build.make headers/Winbgim/test/CMakeFiles/testbgi.dir/build
+	$(MAKE) $(MAKESILENT) -f winbgim_build\test\CMakeFiles\testbgi.dir\build.make winbgim_build/test/CMakeFiles/testbgi.dir/build
 .PHONY : testbgi/fast
 
 src/codegen.obj: src/codegen.cpp.obj

@@ -1,1 +1,1 @@
-  -L"D:/Facultate/An1/Introducere in programare/InterSchem/headers/Winbgim/libbgi/lib"  headers/Winbgim/libbgi/libbgi.a -lgdiplus -lcomdlg32 -lgdi32 -luuid -loleaut32 -lole32 -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
+  -L"D:/Facultate/An1/Introducere in programare/InterSchem/headers/Winbgim/libbgi/lib"  winbgim_build/libbgi/libbgi.a -lgdiplus -lcomdlg32 -lgdi32 -luuid -loleaut32 -lole32 -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

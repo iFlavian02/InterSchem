@@ -63,89 +63,89 @@ CMAKE_BINARY_DIR = "D:\Facultate\An1\Introducere in programare\InterSchem\build"
 
 # The main recursive "all" target.
 all: CMakeFiles/InterSchem.dir/all
-all: headers/Winbgim/all
+all: winbgim_build/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/InterSchem.dir/codegen
-codegen: headers/Winbgim/codegen
+codegen: winbgim_build/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
-preinstall: headers/Winbgim/preinstall
+preinstall: winbgim_build/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/InterSchem.dir/clean
-clean: headers/Winbgim/clean
+clean: winbgim_build/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory headers/Winbgim
+# Directory level rules for directory winbgim_build
 
 # Recursive "all" directory target.
-headers/Winbgim/all: headers/Winbgim/libbgi/all
-headers/Winbgim/all: headers/Winbgim/test/all
-.PHONY : headers/Winbgim/all
+winbgim_build/all: winbgim_build/libbgi/all
+winbgim_build/all: winbgim_build/test/all
+.PHONY : winbgim_build/all
 
 # Recursive "codegen" directory target.
-headers/Winbgim/codegen: headers/Winbgim/libbgi/codegen
-headers/Winbgim/codegen: headers/Winbgim/test/codegen
-.PHONY : headers/Winbgim/codegen
+winbgim_build/codegen: winbgim_build/libbgi/codegen
+winbgim_build/codegen: winbgim_build/test/codegen
+.PHONY : winbgim_build/codegen
 
 # Recursive "preinstall" directory target.
-headers/Winbgim/preinstall: headers/Winbgim/libbgi/preinstall
-headers/Winbgim/preinstall: headers/Winbgim/test/preinstall
-.PHONY : headers/Winbgim/preinstall
+winbgim_build/preinstall: winbgim_build/libbgi/preinstall
+winbgim_build/preinstall: winbgim_build/test/preinstall
+.PHONY : winbgim_build/preinstall
 
 # Recursive "clean" directory target.
-headers/Winbgim/clean: headers/Winbgim/libbgi/clean
-headers/Winbgim/clean: headers/Winbgim/test/clean
-.PHONY : headers/Winbgim/clean
+winbgim_build/clean: winbgim_build/libbgi/clean
+winbgim_build/clean: winbgim_build/test/clean
+.PHONY : winbgim_build/clean
 
 #=============================================================================
-# Directory level rules for directory headers/Winbgim/libbgi
+# Directory level rules for directory winbgim_build/libbgi
 
 # Recursive "all" directory target.
-headers/Winbgim/libbgi/all: headers/Winbgim/libbgi/CMakeFiles/bgi.dir/all
-.PHONY : headers/Winbgim/libbgi/all
+winbgim_build/libbgi/all: winbgim_build/libbgi/CMakeFiles/bgi.dir/all
+.PHONY : winbgim_build/libbgi/all
 
 # Recursive "codegen" directory target.
-headers/Winbgim/libbgi/codegen: headers/Winbgim/libbgi/CMakeFiles/bgi.dir/codegen
-.PHONY : headers/Winbgim/libbgi/codegen
+winbgim_build/libbgi/codegen: winbgim_build/libbgi/CMakeFiles/bgi.dir/codegen
+.PHONY : winbgim_build/libbgi/codegen
 
 # Recursive "preinstall" directory target.
-headers/Winbgim/libbgi/preinstall:
-.PHONY : headers/Winbgim/libbgi/preinstall
+winbgim_build/libbgi/preinstall:
+.PHONY : winbgim_build/libbgi/preinstall
 
 # Recursive "clean" directory target.
-headers/Winbgim/libbgi/clean: headers/Winbgim/libbgi/CMakeFiles/bgi.dir/clean
-.PHONY : headers/Winbgim/libbgi/clean
+winbgim_build/libbgi/clean: winbgim_build/libbgi/CMakeFiles/bgi.dir/clean
+.PHONY : winbgim_build/libbgi/clean
 
 #=============================================================================
-# Directory level rules for directory headers/Winbgim/test
+# Directory level rules for directory winbgim_build/test
 
 # Recursive "all" directory target.
-headers/Winbgim/test/all: headers/Winbgim/test/CMakeFiles/testbgi.dir/all
-.PHONY : headers/Winbgim/test/all
+winbgim_build/test/all: winbgim_build/test/CMakeFiles/testbgi.dir/all
+.PHONY : winbgim_build/test/all
 
 # Recursive "codegen" directory target.
-headers/Winbgim/test/codegen: headers/Winbgim/test/CMakeFiles/testbgi.dir/codegen
-.PHONY : headers/Winbgim/test/codegen
+winbgim_build/test/codegen: winbgim_build/test/CMakeFiles/testbgi.dir/codegen
+.PHONY : winbgim_build/test/codegen
 
 # Recursive "preinstall" directory target.
-headers/Winbgim/test/preinstall:
-.PHONY : headers/Winbgim/test/preinstall
+winbgim_build/test/preinstall:
+.PHONY : winbgim_build/test/preinstall
 
 # Recursive "clean" directory target.
-headers/Winbgim/test/clean: headers/Winbgim/test/CMakeFiles/testbgi.dir/clean
-.PHONY : headers/Winbgim/test/clean
+winbgim_build/test/clean: winbgim_build/test/CMakeFiles/testbgi.dir/clean
+.PHONY : winbgim_build/test/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/InterSchem.dir
 
 # All Build rule for target.
-CMakeFiles/InterSchem.dir/all: headers/Winbgim/libbgi/CMakeFiles/bgi.dir/all
+CMakeFiles/InterSchem.dir/all: winbgim_build/libbgi/CMakeFiles/bgi.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\InterSchem.dir\build.make CMakeFiles/InterSchem.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\InterSchem.dir\build.make CMakeFiles/InterSchem.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Facultate\An1\Introducere in programare\InterSchem\build\CMakeFiles" --progress-num=1,2,3,4,5,6,7 "Built target InterSchem"
@@ -174,68 +174,68 @@ CMakeFiles/InterSchem.dir/clean:
 .PHONY : CMakeFiles/InterSchem.dir/clean
 
 #=============================================================================
-# Target rules for target headers/Winbgim/libbgi/CMakeFiles/bgi.dir
+# Target rules for target winbgim_build/libbgi/CMakeFiles/bgi.dir
 
 # All Build rule for target.
-headers/Winbgim/libbgi/CMakeFiles/bgi.dir/all:
-	$(MAKE) $(MAKESILENT) -f headers\Winbgim\libbgi\CMakeFiles\bgi.dir\build.make headers/Winbgim/libbgi/CMakeFiles/bgi.dir/depend
-	$(MAKE) $(MAKESILENT) -f headers\Winbgim\libbgi\CMakeFiles\bgi.dir\build.make headers/Winbgim/libbgi/CMakeFiles/bgi.dir/build
+winbgim_build/libbgi/CMakeFiles/bgi.dir/all:
+	$(MAKE) $(MAKESILENT) -f winbgim_build\libbgi\CMakeFiles\bgi.dir\build.make winbgim_build/libbgi/CMakeFiles/bgi.dir/depend
+	$(MAKE) $(MAKESILENT) -f winbgim_build\libbgi\CMakeFiles\bgi.dir\build.make winbgim_build/libbgi/CMakeFiles/bgi.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Facultate\An1\Introducere in programare\InterSchem\build\CMakeFiles" --progress-num=8,9,10,11,12,13,14,15,16,17 "Built target bgi"
-.PHONY : headers/Winbgim/libbgi/CMakeFiles/bgi.dir/all
+.PHONY : winbgim_build/libbgi/CMakeFiles/bgi.dir/all
 
 # Build rule for subdir invocation for target.
-headers/Winbgim/libbgi/CMakeFiles/bgi.dir/rule: cmake_check_build_system
+winbgim_build/libbgi/CMakeFiles/bgi.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Facultate\An1\Introducere in programare\InterSchem\build\CMakeFiles" 10
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 headers/Winbgim/libbgi/CMakeFiles/bgi.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 winbgim_build/libbgi/CMakeFiles/bgi.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Facultate\An1\Introducere in programare\InterSchem\build\CMakeFiles" 0
-.PHONY : headers/Winbgim/libbgi/CMakeFiles/bgi.dir/rule
+.PHONY : winbgim_build/libbgi/CMakeFiles/bgi.dir/rule
 
 # Convenience name for target.
-bgi: headers/Winbgim/libbgi/CMakeFiles/bgi.dir/rule
+bgi: winbgim_build/libbgi/CMakeFiles/bgi.dir/rule
 .PHONY : bgi
 
 # codegen rule for target.
-headers/Winbgim/libbgi/CMakeFiles/bgi.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f headers\Winbgim\libbgi\CMakeFiles\bgi.dir\build.make headers/Winbgim/libbgi/CMakeFiles/bgi.dir/codegen
+winbgim_build/libbgi/CMakeFiles/bgi.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f winbgim_build\libbgi\CMakeFiles\bgi.dir\build.make winbgim_build/libbgi/CMakeFiles/bgi.dir/codegen
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Facultate\An1\Introducere in programare\InterSchem\build\CMakeFiles" --progress-num=8,9,10,11,12,13,14,15,16,17 "Finished codegen for target bgi"
-.PHONY : headers/Winbgim/libbgi/CMakeFiles/bgi.dir/codegen
+.PHONY : winbgim_build/libbgi/CMakeFiles/bgi.dir/codegen
 
 # clean rule for target.
-headers/Winbgim/libbgi/CMakeFiles/bgi.dir/clean:
-	$(MAKE) $(MAKESILENT) -f headers\Winbgim\libbgi\CMakeFiles\bgi.dir\build.make headers/Winbgim/libbgi/CMakeFiles/bgi.dir/clean
-.PHONY : headers/Winbgim/libbgi/CMakeFiles/bgi.dir/clean
+winbgim_build/libbgi/CMakeFiles/bgi.dir/clean:
+	$(MAKE) $(MAKESILENT) -f winbgim_build\libbgi\CMakeFiles\bgi.dir\build.make winbgim_build/libbgi/CMakeFiles/bgi.dir/clean
+.PHONY : winbgim_build/libbgi/CMakeFiles/bgi.dir/clean
 
 #=============================================================================
-# Target rules for target headers/Winbgim/test/CMakeFiles/testbgi.dir
+# Target rules for target winbgim_build/test/CMakeFiles/testbgi.dir
 
 # All Build rule for target.
-headers/Winbgim/test/CMakeFiles/testbgi.dir/all: headers/Winbgim/libbgi/CMakeFiles/bgi.dir/all
-	$(MAKE) $(MAKESILENT) -f headers\Winbgim\test\CMakeFiles\testbgi.dir\build.make headers/Winbgim/test/CMakeFiles/testbgi.dir/depend
-	$(MAKE) $(MAKESILENT) -f headers\Winbgim\test\CMakeFiles\testbgi.dir\build.make headers/Winbgim/test/CMakeFiles/testbgi.dir/build
+winbgim_build/test/CMakeFiles/testbgi.dir/all: winbgim_build/libbgi/CMakeFiles/bgi.dir/all
+	$(MAKE) $(MAKESILENT) -f winbgim_build\test\CMakeFiles\testbgi.dir\build.make winbgim_build/test/CMakeFiles/testbgi.dir/depend
+	$(MAKE) $(MAKESILENT) -f winbgim_build\test\CMakeFiles\testbgi.dir\build.make winbgim_build/test/CMakeFiles/testbgi.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Facultate\An1\Introducere in programare\InterSchem\build\CMakeFiles" --progress-num=18,19 "Built target testbgi"
-.PHONY : headers/Winbgim/test/CMakeFiles/testbgi.dir/all
+.PHONY : winbgim_build/test/CMakeFiles/testbgi.dir/all
 
 # Build rule for subdir invocation for target.
-headers/Winbgim/test/CMakeFiles/testbgi.dir/rule: cmake_check_build_system
+winbgim_build/test/CMakeFiles/testbgi.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Facultate\An1\Introducere in programare\InterSchem\build\CMakeFiles" 12
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 headers/Winbgim/test/CMakeFiles/testbgi.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 winbgim_build/test/CMakeFiles/testbgi.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Facultate\An1\Introducere in programare\InterSchem\build\CMakeFiles" 0
-.PHONY : headers/Winbgim/test/CMakeFiles/testbgi.dir/rule
+.PHONY : winbgim_build/test/CMakeFiles/testbgi.dir/rule
 
 # Convenience name for target.
-testbgi: headers/Winbgim/test/CMakeFiles/testbgi.dir/rule
+testbgi: winbgim_build/test/CMakeFiles/testbgi.dir/rule
 .PHONY : testbgi
 
 # codegen rule for target.
-headers/Winbgim/test/CMakeFiles/testbgi.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f headers\Winbgim\test\CMakeFiles\testbgi.dir\build.make headers/Winbgim/test/CMakeFiles/testbgi.dir/codegen
+winbgim_build/test/CMakeFiles/testbgi.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f winbgim_build\test\CMakeFiles\testbgi.dir\build.make winbgim_build/test/CMakeFiles/testbgi.dir/codegen
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Facultate\An1\Introducere in programare\InterSchem\build\CMakeFiles" --progress-num=18,19 "Finished codegen for target testbgi"
-.PHONY : headers/Winbgim/test/CMakeFiles/testbgi.dir/codegen
+.PHONY : winbgim_build/test/CMakeFiles/testbgi.dir/codegen
 
 # clean rule for target.
-headers/Winbgim/test/CMakeFiles/testbgi.dir/clean:
-	$(MAKE) $(MAKESILENT) -f headers\Winbgim\test\CMakeFiles\testbgi.dir\build.make headers/Winbgim/test/CMakeFiles/testbgi.dir/clean
-.PHONY : headers/Winbgim/test/CMakeFiles/testbgi.dir/clean
+winbgim_build/test/CMakeFiles/testbgi.dir/clean:
+	$(MAKE) $(MAKESILENT) -f winbgim_build\test\CMakeFiles\testbgi.dir\build.make winbgim_build/test/CMakeFiles/testbgi.dir/clean
+.PHONY : winbgim_build/test/CMakeFiles/testbgi.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
