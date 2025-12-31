@@ -9,29 +9,32 @@ void drawBlock(Block b, int selectedId) {
     int right = b.center.x + b.w / 2;
     int bottom = b.center.y + b.h / 2;
 
-    // Use black fill to hide lines behind the block
-    setfillstyle(SOLID_FILL, getbkcolor()); 
+    // Default Style
+    setfillstyle(SOLID_FILL, COLOR_BLOCK_FILL); 
+    int borderColor = COLOR_BLOCK_BORDER;
+    int thickness = 1;
 
-    // Highlight selected block
+    // Type-specific Accents
+    if (b.type == TYPE_START) borderColor = COLOR_ACCENT_GREEN;
+    else if (b.type == TYPE_STOP) borderColor = COLOR_ACCENT_RED;
+    else if (b.type == TYPE_DECISION) borderColor = COLOR_ACCENT_GOLD;
+
+    // Selection Override
     if (b.id == selectedId) {
-        setcolor(YELLOW);
-        setlinestyle(SOLID_LINE, 0, 3);
-    } else {
-        setcolor(WHITE);
-        setlinestyle(SOLID_LINE, 0, 1);
+        borderColor = COLOR_BTN_ACTIVE;
+        thickness = 3;
     }
 
+    setcolor(borderColor);
+    setlinestyle(SOLID_LINE, 0, thickness);
+
+    // Text Color
+    int txtColor = COLOR_BTN_TEXT; 
+    setbkcolor(COLOR_BLOCK_FILL); // Ensure text background matches block fill
+
     if (b.type == TYPE_START || b.type == TYPE_STOP) {
-        // fillellipse fills with current fill color and draws border with current color
-        // But in WinBGIm, fillellipse uses the FILL color for the inside.
-        // We want BLACK inside.
         fillellipse(b.center.x, b.center.y, b.w / 2, b.h / 2);
-        
-        // Retain text color (which is set by setcolor, but we want text WHITE usually)
-        // If selected is YELLOW, text will be YELLOW. That's fine.
-        outtextxy(b.center.x - textwidth(b.text) / 2, b.center.y - textheight(b.text) / 2, b.text);
     } else if (b.type == TYPE_DECISION) {
-        // Rhombus
         int points[] = {
             b.center.x, top,
             right, b.center.y,
@@ -41,13 +44,15 @@ void drawBlock(Block b, int selectedId) {
         };
         fillpoly(5, points); // Fills
         drawpoly(5, points); // Border
-        outtextxy(b.center.x - textwidth(b.text) / 2, b.center.y - textheight(b.text) / 2, b.text);
     } else {
         // Rectangle
-        bar(left, top, right, bottom); // Filled black box
+        bar(left, top, right, bottom); // Filled box
         rectangle(left, top, right, bottom); // Border
-        outtextxy(b.center.x - textwidth(b.text) / 2, b.center.y - textheight(b.text) / 2, b.text);
     }
+
+    // Draw Text
+    setcolor(txtColor);
+    outtextxy(b.center.x - textwidth(b.text) / 2, b.center.y - textheight(b.text) / 2, b.text);
 }
 
 // Helper: Check if a horizontal segment (y constant) intersects a block
@@ -83,8 +88,8 @@ bool checkVerticalIntersect(int y1, int y2, int x, Block b) {
 
 // Draws a 3-segment orthogonal link (Vertical -> Horizontal -> Vertical) with simple avoidance
 void drawLink(Point start, Point end, Block* obstacles, int obstacleCount) {
-    setcolor(WHITE);
-    setlinestyle(SOLID_LINE, 0, 1);
+    setcolor(COLOR_WIRE);
+    setlinestyle(SOLID_LINE, 0, 1); // Keep thin for elegance, maybe 2 for visibility? Let's try 1 first.
 
     // Initial naive Midpoint Y
     int midY = (start.y + end.y) / 2;
@@ -92,10 +97,6 @@ void drawLink(Point start, Point end, Block* obstacles, int obstacleCount) {
     // Check for collisions on the horizontal segment (start.x -> end.x at midY)
     bool collision = false;
     for (int i = 0; i < obstacleCount; i++) {
-        // Skip start/end blocks if they are connected (simple heuristics or passed IDs needed for perfect logic)
-        // For now, simple geometric check might flag start/end blocks if lines start inside.
-        // Usually ports are at edges.
-        
         if (checkHorizontalIntersect(start.x, end.x, midY, obstacles[i])) {
             collision = true; 
             break;
@@ -103,9 +104,8 @@ void drawLink(Point start, Point end, Block* obstacles, int obstacleCount) {
     }
 
     if (collision) {
-        setcolor(RED); // Visualize blocked path
-        // Simple heuristic: try to move down
-         midY += 60; 
+        setcolor(COLOR_WIRE_ERROR); // Visualize blocked path
+        midY += 60; 
     }
 
     // 1. Vertical down from start
@@ -121,7 +121,7 @@ void drawLink(Point start, Point end, Block* obstacles, int obstacleCount) {
     line(end.x, end.y, end.x - 5, end.y - 10);
     line(end.x, end.y, end.x + 5, end.y - 10);
     
-    setcolor(WHITE); // Reset
+    setcolor(COLOR_BTN_TEXT); // Reset
 }
 
 // Toolbar Constants
@@ -131,11 +131,11 @@ const int BTN_MARGIN = 10;
 
 void drawToolbar(AppState state, int w, int h) {
     // Background
-    setfillstyle(SOLID_FILL, DARKGRAY);
+    setfillstyle(SOLID_FILL, COLOR_TOOLBAR_BG);
     bar(0, 0, TOOLBAR_WIDTH, h);
     
-    setcolor(WHITE);
-    setbkcolor(DARKGRAY);
+    setcolor(COLOR_BTN_TEXT);
+    setbkcolor(COLOR_TOOLBAR_BG); // Match text background
     
     const char* labels[] = {
         "SELECT", "START", "OPERATION", "DECISION", "STOP", "LINK", "DELETE", "SAVE", "LOAD", "RUN", "C++"
@@ -149,23 +149,25 @@ void drawToolbar(AppState state, int w, int h) {
         int y = BTN_MARGIN + i * (BTN_HEIGHT + BTN_MARGIN);
         int bottom = y + BTN_HEIGHT;
         
+        int btnColor = COLOR_BTN_NORMAL;
         // Highlight active
         if (state.currentMode == modes[i]) {
-            setfillstyle(SOLID_FILL, BLUE);
-        } else {
-            setfillstyle(SOLID_FILL, LIGHTGRAY);
+            btnColor = COLOR_BTN_ACTIVE;
         }
+        
+        setfillstyle(SOLID_FILL, btnColor);
         bar(BTN_MARGIN, y, TOOLBAR_WIDTH - BTN_MARGIN, bottom);
-        rectangle(BTN_MARGIN, y, TOOLBAR_WIDTH - BTN_MARGIN, bottom);
+        
+        // No border for flat look
         
         // Center text
+        setbkcolor(btnColor);
         int tx = (TOOLBAR_WIDTH - textwidth((char*)labels[i])) / 2;
         int ty = y + (BTN_HEIGHT - textheight((char*)labels[i])) / 2;
         
-        setbkcolor(state.currentMode == modes[i] ? BLUE : LIGHTGRAY);
         outtextxy(tx, ty, (char*)labels[i]);
     }
     
     // Reset background color for main canvas
-    setbkcolor(BLACK);
+    setbkcolor(COLOR_BG);
 }

@@ -22,6 +22,8 @@ const int BTN_MARGIN = 10;
 int main() {
     initwindow(WINDOW_WIDTH, WINDOW_HEIGHT, "InterSchem");
     settextstyle(SANS_SERIF_FONT, HORIZ_DIR, 2);
+    setbkcolor(COLOR_BG); // Set initial background color
+    cleardevice();
     
     // Application State Initialization
     AppState appState;
@@ -271,8 +273,8 @@ int main() {
         }
         
         // Debug Info
-        setcolor(LIGHTGRAY);
-        setbkcolor(BLACK); // Ensure text background is black
+        setcolor(COLOR_BTN_TEXT);
+        setbkcolor(COLOR_BG); // Ensure text background matches canvas
         char debugMsg[100];
         sprintf(debugMsg, "Mode: %d Blocks: %d Sel: %d", appState.currentMode, appState.blockCount, appState.selectedBlockId);
         outtextxy(TOOLBAR_WIDTH + 10, 10, debugMsg);
