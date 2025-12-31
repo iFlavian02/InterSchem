@@ -16,8 +16,10 @@ add_executable(InterSchem
     src/codegen.cpp
 )
 
-# Link against bgi (the target defined in Winbgim/libbgi)
-target_link_libraries(InterSchem PRIVATE bgi)
+# Link directories for the bgi library
+target_link_directories(InterSchem PRIVATE
+        ${CMAKE_SOURCE_DIR}/headers/Winbgim/libbgi/lib
+)
 
 # Include directories
 # 1. Allow #include "headers/geometry.h" etc so we can match project structure
@@ -25,3 +27,8 @@ target_include_directories(InterSchem PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
 # 2. Allow #include <graphics.h> directly (it's in include/bgi)
 target_include_directories(InterSchem PRIVATE headers/Winbgim/libbgi/include/bgi)
+
+# Link against bgi (the target defined in Winbgim/libbgi)
+target_link_libraries(InterSchem PRIVATE
+        bgi
+)

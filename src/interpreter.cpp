@@ -53,6 +53,9 @@ void trimSpaces(char* str) {
     }
 }
 
+// Forward declaration
+float evaluateRHS(char* rhs);
+
 float parseExpression(char* expr) {
     // Trim first
     trimSpaces(expr);
@@ -63,7 +66,13 @@ float parseExpression(char* expr) {
     if (end != expr && *end == '\0') {
         return val;
     }
-    // Check if it's a variable
+    
+    // Check if expression contains arithmetic operators - if so, evaluate recursively
+    if (strchr(expr, '+') || strchr(expr, '-') || strchr(expr, '*') || strchr(expr, '/')) {
+        return evaluateRHS(expr);
+    }
+    
+    // Check if it's a simple variable name
     if ((expr[0] >= 'a' && expr[0] <= 'z') || (expr[0] >= 'A' && expr[0] <= 'Z')) {
          return getVarValue(expr);
     }
@@ -74,33 +83,44 @@ float parseExpression(char* expr) {
 float evaluateRHS(char* rhs) {
     trimSpaces(rhs);
     
-    char op = 0;
+    // Check for two-character operators first (<=, >=, ==)
+    char op[3] = {0};
     char* opPtr = NULL;
+    int opLen = 1;
     
-    if ((opPtr = strchr(rhs, '+'))) op = '+';
-    else if ((opPtr = strchr(rhs, '-'))) op = '-';
-    else if ((opPtr = strchr(rhs, '*'))) op = '*';
-    else if ((opPtr = strchr(rhs, '/'))) op = '/';
-    else if ((opPtr = strchr(rhs, '<'))) op = '<';
-    else if ((opPtr = strchr(rhs, '>'))) op = '>';
+    if ((opPtr = strstr(rhs, "<="))) { strcpy(op, "<="); opLen = 2; }
+    else if ((opPtr = strstr(rhs, ">="))) { strcpy(op, ">="); opLen = 2; }
+    else if ((opPtr = strstr(rhs, "=="))) { strcpy(op, "=="); opLen = 2; }
+    else if ((opPtr = strchr(rhs, '+'))) { op[0] = '+'; }
+    else if ((opPtr = strchr(rhs, '-'))) { op[0] = '-'; }
+    else if ((opPtr = strchr(rhs, '*'))) { op[0] = '*'; }
+    else if ((opPtr = strchr(rhs, '/'))) { op[0] = '/'; }
+    else if ((opPtr = strchr(rhs, '<'))) { op[0] = '<'; }
+    else if ((opPtr = strchr(rhs, '>'))) { op[0] = '>'; }
     
-    if (op) {
-        *opPtr = '\0'; // Split string
+    if (opPtr && op[0]) {
         char part1[50], part2[50];
-        strcpy(part1, rhs);
-        strcpy(part2, opPtr + 1);
+        
+        // Copy part before operator
+        int len1 = opPtr - rhs;
+        strncpy(part1, rhs, len1);
+        part1[len1] = '\0';
+        
+        // Copy part after operator
+        strcpy(part2, opPtr + opLen);
         
         // Trim both parts
         trimSpaces(part1);
         trimSpaces(part2);
         
-        // Restore original string
-        *opPtr = op;
-        
         float v1 = parseExpression(part1);
         float v2 = parseExpression(part2);
         
-        switch(op) {
+        if (strcmp(op, "<=") == 0) return (v1 <= v2) ? 1.0f : 0.0f;
+        if (strcmp(op, ">=") == 0) return (v1 >= v2) ? 1.0f : 0.0f;
+        if (strcmp(op, "==") == 0) return (v1 == v2) ? 1.0f : 0.0f;
+        
+        switch(op[0]) {
             case '+': return v1 + v2;
             case '-': return v1 - v2;
             case '*': return v1 * v2;

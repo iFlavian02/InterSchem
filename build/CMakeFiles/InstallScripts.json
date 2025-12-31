@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"D:/Facultate/An1/Introducere in programare/InterSchem/build/cmake_install.cmake",
+		"D:/Facultate/An1/Introducere in programare/InterSchem/build/headers/Winbgim/cmake_install.cmake",
+		"D:/Facultate/An1/Introducere in programare/InterSchem/build/headers/Winbgim/libbgi/cmake_install.cmake",
+		"D:/Facultate/An1/Introducere in programare/InterSchem/build/headers/Winbgim/test/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
