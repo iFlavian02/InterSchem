@@ -76,90 +76,90 @@ CMakeFiles/InterSchem.dir/src/main.cpp.obj: CMakeFiles/InterSchem.dir/includes_C
 CMakeFiles/InterSchem.dir/src/main.cpp.obj: D:/Facultate/An1/Introducere\ in\ programare/InterSchem/src/main.cpp
 CMakeFiles/InterSchem.dir/src/main.cpp.obj: CMakeFiles/InterSchem.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Facultate\An1\Introducere in programare\InterSchem\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/InterSchem.dir/src/main.cpp.obj"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/InterSchem.dir/src/main.cpp.obj -MF CMakeFiles\InterSchem.dir\src\main.cpp.obj.d -o CMakeFiles\InterSchem.dir\src\main.cpp.obj -c "D:\Facultate\An1\Introducere in programare\InterSchem\src\main.cpp"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/InterSchem.dir/src/main.cpp.obj -MF CMakeFiles\InterSchem.dir\src\main.cpp.obj.d -o CMakeFiles\InterSchem.dir\src\main.cpp.obj -c "D:\Facultate\An1\Introducere in programare\InterSchem\src\main.cpp"
 
 CMakeFiles/InterSchem.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/InterSchem.dir/src/main.cpp.i"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Facultate\An1\Introducere in programare\InterSchem\src\main.cpp" > CMakeFiles\InterSchem.dir\src\main.cpp.i
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Facultate\An1\Introducere in programare\InterSchem\src\main.cpp" > CMakeFiles\InterSchem.dir\src\main.cpp.i
 
 CMakeFiles/InterSchem.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/InterSchem.dir/src/main.cpp.s"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Facultate\An1\Introducere in programare\InterSchem\src\main.cpp" -o CMakeFiles\InterSchem.dir\src\main.cpp.s
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Facultate\An1\Introducere in programare\InterSchem\src\main.cpp" -o CMakeFiles\InterSchem.dir\src\main.cpp.s
 
 CMakeFiles/InterSchem.dir/src/renderer.cpp.obj: CMakeFiles/InterSchem.dir/flags.make
 CMakeFiles/InterSchem.dir/src/renderer.cpp.obj: CMakeFiles/InterSchem.dir/includes_CXX.rsp
 CMakeFiles/InterSchem.dir/src/renderer.cpp.obj: D:/Facultate/An1/Introducere\ in\ programare/InterSchem/src/renderer.cpp
 CMakeFiles/InterSchem.dir/src/renderer.cpp.obj: CMakeFiles/InterSchem.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Facultate\An1\Introducere in programare\InterSchem\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/InterSchem.dir/src/renderer.cpp.obj"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/InterSchem.dir/src/renderer.cpp.obj -MF CMakeFiles\InterSchem.dir\src\renderer.cpp.obj.d -o CMakeFiles\InterSchem.dir\src\renderer.cpp.obj -c "D:\Facultate\An1\Introducere in programare\InterSchem\src\renderer.cpp"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/InterSchem.dir/src/renderer.cpp.obj -MF CMakeFiles\InterSchem.dir\src\renderer.cpp.obj.d -o CMakeFiles\InterSchem.dir\src\renderer.cpp.obj -c "D:\Facultate\An1\Introducere in programare\InterSchem\src\renderer.cpp"
 
 CMakeFiles/InterSchem.dir/src/renderer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/InterSchem.dir/src/renderer.cpp.i"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Facultate\An1\Introducere in programare\InterSchem\src\renderer.cpp" > CMakeFiles\InterSchem.dir\src\renderer.cpp.i
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Facultate\An1\Introducere in programare\InterSchem\src\renderer.cpp" > CMakeFiles\InterSchem.dir\src\renderer.cpp.i
 
 CMakeFiles/InterSchem.dir/src/renderer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/InterSchem.dir/src/renderer.cpp.s"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Facultate\An1\Introducere in programare\InterSchem\src\renderer.cpp" -o CMakeFiles\InterSchem.dir\src\renderer.cpp.s
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Facultate\An1\Introducere in programare\InterSchem\src\renderer.cpp" -o CMakeFiles\InterSchem.dir\src\renderer.cpp.s
 
 CMakeFiles/InterSchem.dir/src/interaction.cpp.obj: CMakeFiles/InterSchem.dir/flags.make
 CMakeFiles/InterSchem.dir/src/interaction.cpp.obj: CMakeFiles/InterSchem.dir/includes_CXX.rsp
 CMakeFiles/InterSchem.dir/src/interaction.cpp.obj: D:/Facultate/An1/Introducere\ in\ programare/InterSchem/src/interaction.cpp
 CMakeFiles/InterSchem.dir/src/interaction.cpp.obj: CMakeFiles/InterSchem.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Facultate\An1\Introducere in programare\InterSchem\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/InterSchem.dir/src/interaction.cpp.obj"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/InterSchem.dir/src/interaction.cpp.obj -MF CMakeFiles\InterSchem.dir\src\interaction.cpp.obj.d -o CMakeFiles\InterSchem.dir\src\interaction.cpp.obj -c "D:\Facultate\An1\Introducere in programare\InterSchem\src\interaction.cpp"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/InterSchem.dir/src/interaction.cpp.obj -MF CMakeFiles\InterSchem.dir\src\interaction.cpp.obj.d -o CMakeFiles\InterSchem.dir\src\interaction.cpp.obj -c "D:\Facultate\An1\Introducere in programare\InterSchem\src\interaction.cpp"
 
 CMakeFiles/InterSchem.dir/src/interaction.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/InterSchem.dir/src/interaction.cpp.i"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Facultate\An1\Introducere in programare\InterSchem\src\interaction.cpp" > CMakeFiles\InterSchem.dir\src\interaction.cpp.i
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Facultate\An1\Introducere in programare\InterSchem\src\interaction.cpp" > CMakeFiles\InterSchem.dir\src\interaction.cpp.i
 
 CMakeFiles/InterSchem.dir/src/interaction.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/InterSchem.dir/src/interaction.cpp.s"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Facultate\An1\Introducere in programare\InterSchem\src\interaction.cpp" -o CMakeFiles\InterSchem.dir\src\interaction.cpp.s
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Facultate\An1\Introducere in programare\InterSchem\src\interaction.cpp" -o CMakeFiles\InterSchem.dir\src\interaction.cpp.s
 
 CMakeFiles/InterSchem.dir/src/file_io.cpp.obj: CMakeFiles/InterSchem.dir/flags.make
 CMakeFiles/InterSchem.dir/src/file_io.cpp.obj: CMakeFiles/InterSchem.dir/includes_CXX.rsp
 CMakeFiles/InterSchem.dir/src/file_io.cpp.obj: D:/Facultate/An1/Introducere\ in\ programare/InterSchem/src/file_io.cpp
 CMakeFiles/InterSchem.dir/src/file_io.cpp.obj: CMakeFiles/InterSchem.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Facultate\An1\Introducere in programare\InterSchem\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/InterSchem.dir/src/file_io.cpp.obj"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/InterSchem.dir/src/file_io.cpp.obj -MF CMakeFiles\InterSchem.dir\src\file_io.cpp.obj.d -o CMakeFiles\InterSchem.dir\src\file_io.cpp.obj -c "D:\Facultate\An1\Introducere in programare\InterSchem\src\file_io.cpp"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/InterSchem.dir/src/file_io.cpp.obj -MF CMakeFiles\InterSchem.dir\src\file_io.cpp.obj.d -o CMakeFiles\InterSchem.dir\src\file_io.cpp.obj -c "D:\Facultate\An1\Introducere in programare\InterSchem\src\file_io.cpp"
 
 CMakeFiles/InterSchem.dir/src/file_io.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/InterSchem.dir/src/file_io.cpp.i"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Facultate\An1\Introducere in programare\InterSchem\src\file_io.cpp" > CMakeFiles\InterSchem.dir\src\file_io.cpp.i
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Facultate\An1\Introducere in programare\InterSchem\src\file_io.cpp" > CMakeFiles\InterSchem.dir\src\file_io.cpp.i
 
 CMakeFiles/InterSchem.dir/src/file_io.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/InterSchem.dir/src/file_io.cpp.s"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Facultate\An1\Introducere in programare\InterSchem\src\file_io.cpp" -o CMakeFiles\InterSchem.dir\src\file_io.cpp.s
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Facultate\An1\Introducere in programare\InterSchem\src\file_io.cpp" -o CMakeFiles\InterSchem.dir\src\file_io.cpp.s
 
 CMakeFiles/InterSchem.dir/src/interpreter.cpp.obj: CMakeFiles/InterSchem.dir/flags.make
 CMakeFiles/InterSchem.dir/src/interpreter.cpp.obj: CMakeFiles/InterSchem.dir/includes_CXX.rsp
 CMakeFiles/InterSchem.dir/src/interpreter.cpp.obj: D:/Facultate/An1/Introducere\ in\ programare/InterSchem/src/interpreter.cpp
 CMakeFiles/InterSchem.dir/src/interpreter.cpp.obj: CMakeFiles/InterSchem.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Facultate\An1\Introducere in programare\InterSchem\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/InterSchem.dir/src/interpreter.cpp.obj"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/InterSchem.dir/src/interpreter.cpp.obj -MF CMakeFiles\InterSchem.dir\src\interpreter.cpp.obj.d -o CMakeFiles\InterSchem.dir\src\interpreter.cpp.obj -c "D:\Facultate\An1\Introducere in programare\InterSchem\src\interpreter.cpp"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/InterSchem.dir/src/interpreter.cpp.obj -MF CMakeFiles\InterSchem.dir\src\interpreter.cpp.obj.d -o CMakeFiles\InterSchem.dir\src\interpreter.cpp.obj -c "D:\Facultate\An1\Introducere in programare\InterSchem\src\interpreter.cpp"
 
 CMakeFiles/InterSchem.dir/src/interpreter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/InterSchem.dir/src/interpreter.cpp.i"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Facultate\An1\Introducere in programare\InterSchem\src\interpreter.cpp" > CMakeFiles\InterSchem.dir\src\interpreter.cpp.i
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Facultate\An1\Introducere in programare\InterSchem\src\interpreter.cpp" > CMakeFiles\InterSchem.dir\src\interpreter.cpp.i
 
 CMakeFiles/InterSchem.dir/src/interpreter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/InterSchem.dir/src/interpreter.cpp.s"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Facultate\An1\Introducere in programare\InterSchem\src\interpreter.cpp" -o CMakeFiles\InterSchem.dir\src\interpreter.cpp.s
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Facultate\An1\Introducere in programare\InterSchem\src\interpreter.cpp" -o CMakeFiles\InterSchem.dir\src\interpreter.cpp.s
 
 CMakeFiles/InterSchem.dir/src/codegen.cpp.obj: CMakeFiles/InterSchem.dir/flags.make
 CMakeFiles/InterSchem.dir/src/codegen.cpp.obj: CMakeFiles/InterSchem.dir/includes_CXX.rsp
 CMakeFiles/InterSchem.dir/src/codegen.cpp.obj: D:/Facultate/An1/Introducere\ in\ programare/InterSchem/src/codegen.cpp
 CMakeFiles/InterSchem.dir/src/codegen.cpp.obj: CMakeFiles/InterSchem.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Facultate\An1\Introducere in programare\InterSchem\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/InterSchem.dir/src/codegen.cpp.obj"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/InterSchem.dir/src/codegen.cpp.obj -MF CMakeFiles\InterSchem.dir\src\codegen.cpp.obj.d -o CMakeFiles\InterSchem.dir\src\codegen.cpp.obj -c "D:\Facultate\An1\Introducere in programare\InterSchem\src\codegen.cpp"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/InterSchem.dir/src/codegen.cpp.obj -MF CMakeFiles\InterSchem.dir\src\codegen.cpp.obj.d -o CMakeFiles\InterSchem.dir\src\codegen.cpp.obj -c "D:\Facultate\An1\Introducere in programare\InterSchem\src\codegen.cpp"
 
 CMakeFiles/InterSchem.dir/src/codegen.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/InterSchem.dir/src/codegen.cpp.i"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Facultate\An1\Introducere in programare\InterSchem\src\codegen.cpp" > CMakeFiles\InterSchem.dir\src\codegen.cpp.i
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Facultate\An1\Introducere in programare\InterSchem\src\codegen.cpp" > CMakeFiles\InterSchem.dir\src\codegen.cpp.i
 
 CMakeFiles/InterSchem.dir/src/codegen.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/InterSchem.dir/src/codegen.cpp.s"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Facultate\An1\Introducere in programare\InterSchem\src\codegen.cpp" -o CMakeFiles\InterSchem.dir\src\codegen.cpp.s
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Facultate\An1\Introducere in programare\InterSchem\src\codegen.cpp" -o CMakeFiles\InterSchem.dir\src\codegen.cpp.s
 
 # Object files for target InterSchem
 InterSchem_OBJECTS = \

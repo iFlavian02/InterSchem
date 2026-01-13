@@ -1,0 +1,143 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "winbgim_build",
+					"childIndexes" : 
+					[
+						2,
+						3
+					],
+					"jsonFile" : "directory-winbgim_build-Debug-15b8b9c68d01cb3aca8a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.11"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "headers/Winbgim"
+				},
+				{
+					"build" : "winbgim_build/libbgi",
+					"jsonFile" : "directory-winbgim_build.libbgi-Debug-8cdd27bee149490b9198.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.11"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "headers/Winbgim/libbgi",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "winbgim_build/test",
+					"jsonFile" : "directory-winbgim_build.test-Debug-0758e3f8d52eaaaf54f2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.11"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "headers/Winbgim/test",
+					"targetIndexes" : 
+					[
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "InterSchem",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"name" : "WinBGIm",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "InterSchem::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-InterSchem-Debug-4ed513afd2c4169975d2.json",
+					"name" : "InterSchem",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "bgi::@687fb3172d2acbf9c925",
+					"jsonFile" : "target-bgi-Debug-e2038f4b3210299f66d3.json",
+					"name" : "bgi",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "testbgi::@0ed82c845dfe1d097785",
+					"jsonFile" : "target-testbgi-Debug-aca48047982839450111.json",
+					"name" : "testbgi",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Facultate/An1/Introducere in programare/InterSchem/build",
+		"source" : "D:/Facultate/An1/Introducere in programare/InterSchem"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}
